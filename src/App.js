@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { Header } from './components/layout/Header';
+import { Content } from './components/layout/Content';
+import { ProjectsProvider, SelectedProjectsProvider } from './context'
 
 
 
 export const App = () =>  (
+  <SelectedProjectsProvider>
+    <ProjectsProvider>
     <div className="App">
-      <header className="App-header">
-        <p>hi!</p>
-      </header>
-    </div>
-  );
+      <Header />
+      <Content />
 
-export default App;
+    </div>
+    </ProjectsProvider>
+  </SelectedProjectsProvider>
+    
+  );
