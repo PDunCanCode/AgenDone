@@ -6,7 +6,10 @@ import {
      FaRegCalendar, 
     } from 'react-icons/fa';
 
-export const Sidebar = () => (
+export const Sidebar = () =>  {
+    
+}
+return(
     <div className="sidebar" data-testid="sidebar">
         <ul className="sidebar__generic">
             <li><span><FaInbox /></span><span>Inbox</span></li>
