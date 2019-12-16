@@ -1,9 +1,9 @@
 import {
     ProjectsContext,
     ProjectsProvider,
-    useProectsValue,
+    useProjectsValue,
 } from './projects-context';
 
 export { ProjectsContext,
     ProjectsProvider,
-    useProectsValue }
+    useProjectsValue }
