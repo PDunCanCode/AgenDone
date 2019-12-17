@@ -5,7 +5,7 @@ export const ProjectsContext = createContext();
 export const ProjectsProvider = ({ children }) => {
     const { projects, setProjects } = useProjects();
 
-    rerturn (
+    return (
         <ProjectsContext.Provider value={{ projects, setProjects}}>
             {children}
         </ProjectsContext.Provider>
