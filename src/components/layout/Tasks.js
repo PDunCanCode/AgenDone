@@ -14,6 +14,18 @@ export const Tasks = () => {
 
     let projectName = '';
 
+    if (projects && selectedProject && !collatedTasksExist(selectedProject)){
+        projectName = getTitle(projects,selectedProject).name;
+    }
+
+    if (collatedTasksExist(selectedProject) && selectedProject) {
+        projectName = getCollatedTitle(collatedTasks,selectedProject).name;
+    }
+
+    useEffect(() => {
+        document.title = `${projectName}: AgenDone`;
+    });
+
     return (
         <div className="tasks" data-testid="tasks">
             <h2 data-testid="project-name">{projectName}</h2>
